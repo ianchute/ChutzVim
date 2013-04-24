@@ -9,5 +9,7 @@ in THREE easy steps in the terminal!
 3. ./ChutzVim.sh
 
 WARNING: vim will be reinstalled
+
 read _vimrc file for details
+
 contact me at ianchute@hotmail.com for any feedback/problems/suggestions.
