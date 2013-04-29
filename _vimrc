@@ -7,6 +7,7 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
+set number
 filetype indent on
 
 ".......................................................
@@ -36,22 +37,34 @@ nmap ; :
 "space can become leader for EasyMotion
 nmap <space> \\
 
-"two quick successions of space means <Esc>
-imap <space><space> <Esc>
+"<ctrl><space> means <Esc>
+imap <ctrl><space> <Esc>
 
 "F4 means close file
 nmap <F4> :bd<CR>
 
-"F2 means save
-nmap <F2> :w<CR>
+"s means save
+nmap s :w<CR>
 
 "t to TComment
-nmap t :TComment<CR>
+" nmap t :TComment<CR>
+
+"T to TCommentBlock
+" nmap T :TCommentBlock<CR>
 
 "0 to ^
 nmap 0 ^
 
-"T to TCommentBlock
-nmap T :TCommentBlock<CR>
+"9 to c$
+nmap 9 ^c$
+
+"w to compile in gcc/g++
+autocmd FileType c nmap w :!gcc % \| less<CR><CR>
+autocmd FileType cpp nmap w :!g++ % \| less<CR><CR>
+autocmd FileType fortran nmap w :!gfortran % \| less<CR><CR>
+autocmd FileType python nmap w :!python % \| less<CR><CR>
+
+"<space>r to run in gcc/g++
+nmap \\r :!./a.out \| less<CR><CR>
 
 filetype plugin indent on     " required!
