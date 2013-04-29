@@ -1,4 +1,4 @@
-#ChutzVim Installer (requires Internet)
+#ChutzVim Installer (requires an Internet connection)
 #Read _vimrc for details
 #Written by: Ian Herve U. Chu Te
 
